@@ -1,0 +1,21 @@
+
+REPORT ON IRIS DATASET USING KNN
+
+We used a method called k-Nearest Neighbors (k-NN) to sort flowers into three types
+Setosa, Versicolor, and Virginica.
+
+
+By changing the number k to see how well the sorting works.
+
+Confusion Matrix 
+Setosa flowers are always sorted correctly.
+Versicolor and Virginica sometimes get mixed up.
+Small k = 1 makes more mistakes because it listens too much to close neighbors.
+Big k = 29 is more stable but may not notice small details.
+
+Decision Boundary 
+The colored areas show where the model thinks each flower should go.
+Small k  The shapes are messy because the model changes a lot.
+Big k  The shapes are smoother but may not be perfect
+A middle value of k (like 5 to 17) is best because it makes fewer mistakes.
+
