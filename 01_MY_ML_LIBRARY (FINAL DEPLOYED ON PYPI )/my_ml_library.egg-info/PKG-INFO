@@ -1,12 +1,14 @@
 Metadata-Version: 2.4
 Name: my_ml_library
-Version: 0.1
-Summary: A simple machine learning library inspired by scikit-learn.
+Version: 0.1.1
+Summary: A simple machine learning library with regression models and metrics.
+Home-page: https://github.com/bhushanzade02
 Author: Bhushan Zade
 Author-email: bhushanzade02@gmail.com
 Requires-Dist: numpy
 Requires-Dist: scipy
-Dynamic: BHUSHAN SANJY ZADE
-Dynamic: bhushanzade02@gmail.com
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
 Dynamic: requires-dist
 Dynamic: summary

@@ -59,3 +59,44 @@ class LogisticRegression:
         linear_model = np.dot(X, self.weights) + self.bias
         predictions = self.sigmoid(linear_model)
         return np.round(predictions)
+
+
+
+class RidgeRegression:
+    def __init__(self, alpha=1.0):
+        self.alpha = alpha
+        self.coefficients = None
+
+    def fit(self, X, y):
+        X = np.column_stack((np.ones(X.shape[0]), X))
+        n_features = X.shape[1]
+        identity = np.eye(n_features)
+        identity[0, 0] = 0  # Don't regularize the bias term
+        self.coefficients = np.linalg.inv(X.T @ X + self.alpha * identity) @ X.T @ y
+
+    def predict(self, X):
+        X = np.column_stack((np.ones(X.shape[0]), X))
+        return X @ self.coefficients
+
+class LassoRegression:
+    def __init__(self, alpha=1.0, iterations=1000, learning_rate=0.01):
+        self.alpha = alpha
+        self.iterations = iterations
+        self.learning_rate = learning_rate
+        self.coefficients = None
+
+    def fit(self, X, y):
+        X = np.column_stack((np.ones(X.shape[0]), X))
+        n_samples, n_features = X.shape
+        self.coefficients = np.zeros(n_features)
+
+        for _ in range(self.iterations):
+            y_pred = X @ self.coefficients
+            error = y_pred - y
+            gradient = (X.T @ error) / n_samples
+            self.coefficients -= self.learning_rate * gradient
+            self.coefficients[1:] -= self.learning_rate * self.alpha * np.sign(self.coefficients[1:])
+
+    def predict(self, X):
+        X = np.column_stack((np.ones(X.shape[0]), X))
+        return X @ self.coefficients
