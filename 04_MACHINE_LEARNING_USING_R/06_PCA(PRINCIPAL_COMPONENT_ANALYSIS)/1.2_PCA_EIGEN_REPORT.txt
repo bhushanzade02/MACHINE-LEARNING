@@ -1,0 +1,29 @@
+Objective:
+Compare the results of our custom PCA implementation (using EIGEN DECOMPOSITION) 
+with R’s built-in princomp() function on the USArrests dataset.
+
+Introduction:
+
+Principal Component Analysis (PCA) was applied to the USArrests dataset to reduce the dimensionality of the data and extract key components. 
+
+PCA was performed using two methods:
+1.Custom PCA function (using eigenvalue decomposition).
+2.princomp() function (built-in R function).
+
+
+Loadings Comparison:
+The first component (Comp.1) in both methods strongly correlates with Murder and Assault, 
+indicating it captures the variance from these two variables.
+The second component (Comp.2) primarily reflects Rape in the custom PCA, 
+while princomp() includes UrbanPop in the second and third components.
+
+Scores Comparison:
+The scores for both methods show a similar pattern of variance,
+ with the first component (Comp.1) dominating the explained variance.
+Although the numerical values for the scores differ slightly between the methods,
+ they reflect similar projections of the states onto the principal components.
+
+Conclusion:
+Both the Custom PCA and princomp() methods provide similar insights into the data,
+ with slight differences in the scaling of scores and the distribution of variance across components.
+ The results confirm that the custom PCA implementation is consistent with the standard PCA approach.

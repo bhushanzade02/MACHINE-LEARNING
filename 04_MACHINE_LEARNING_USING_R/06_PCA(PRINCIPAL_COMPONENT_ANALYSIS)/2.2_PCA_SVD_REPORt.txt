@@ -1,0 +1,23 @@
+Objective:
+Compare the results of our custom PCA implementation (using SVD) 
+with R’s built-in princomp() function on the USArrests dataset.
+
+
+Observation:
+The loading values are identical in magnitude but differ by a sign (negative vs positive).
+In PCA, sign differences are expected and mathematically valid 
+because eigenvectors are unique only up to sign.
+
+Proportion of Variance:
+The built-in princomp() output shows that each principal component 
+explains 25% of the total variance, as expected for a 4-variable, standardized dataset.
+
+Correctness:
+Our custom PCA implementation produces correct principal components that 
+match the built-in results after accounting for possible sign flips.
+
+
+Conclusion:
+The custom PCA function (using SVD) is correct.
+It behaves consistently with princomp() on a standard dataset (USArrests).
+Minor differences in signs do not affect the interpretation of principal components
