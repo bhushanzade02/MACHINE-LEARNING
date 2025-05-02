@@ -1,3 +1,21 @@
+Metadata-Version: 2.4
+Name: algonix
+Version: 0.1.1
+Summary: A simple machine learning library with custom models, optimizers, and metrics.
+Home-page: https://github.com/bhushanzade02/MACHINE-LEARNING
+Author: Bhushan Zade
+Author-email: Bhushan Zade <bhushanzade02@gmail.com>
+License: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: scikit-learn
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
 # My ML Library
 
 A lightweight machine learning library inspired by scikit-learn.
@@ -5,7 +23,6 @@ A lightweight machine learning library inspired by scikit-learn.
 ## Installation
 ```bash
 pip install algonix
-```
 
 
 ## 🤖 Algonix — A Custom Machine Learning Library

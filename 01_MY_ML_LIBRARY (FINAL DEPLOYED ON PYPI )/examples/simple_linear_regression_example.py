@@ -1,6 +1,6 @@
 import numpy as np
-from my_ml_library.models import SimpleLinearRegression
-from my_ml_library.metrics import mean_squared_error, r2_score
+from algonix.models import SimpleLinearRegression
+from algonix.metrics import mean_squared_error, r2_score
 
 # Data
 X = np.array([[1], [2], [3], [4], [5]])
