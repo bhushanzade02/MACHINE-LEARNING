@@ -1,10 +1,11 @@
-# My ML Library
+# My ML Library ALGONIX
 
 A lightweight machine learning library inspired by scikit-learn.
 
 ## Installation
 ```bash
 pip install algonix
+<<<<<<< HEAD
 ```
 
 
@@ -56,3 +57,5 @@ Welcome to **Algonix**, a lightweight, beginner-friendly machine learning librar
 ```bash
 git clone https://github.com/bhushanzade02/MACHINE-LEARNING.git
 cd MACHINE-LEARNING
+=======
+>>>>>>> 368579200e96cf49bbb5ba5f047c8373ce206849
