@@ -1,0 +1,20 @@
+** SOFTMAX REGRESSION **
+
+- Softmax regression, also known as multinomial logistic regression, 
+  It is a classification algorithm used when the target variable has more than two categories. 
+
+- It extends logistic regression by applying the softmax function to the linear outputs (logits), 
+  converting them into probabilities that sum to one across classes. 
+
+- The model is trained by minimizing the cross-entropy loss using gradient descent. During training, 
+  the weights are updated iteratively to maximize the probability of the correct class for each input.
+
+
+* while implementing softmax regression challenges i faced :
+
+1.Ensuring numerical stability in the softmax function, 
+  which i resolved by subtracting the maximum logit
+  before exponentiation.
+
+2.Another issue was debugging shape mismatches during
+  matrix multiplication.
